@@ -97,10 +97,11 @@ export class Fireworks {
     constructor(params: FireworksOptions) {
         this._target = params.target
         this._canvas = document.createElement('canvas')
+        this._canvas.style.position = 'absolute'
         this._ctx = this._canvas.getContext('2d') as CanvasRenderingContext2D
 
         this.updateSize()
-        this._target.appendChild(this._canvas)
+        this._target.insertBefore(this._canvas, this._target.firstChild);
 
         this._hue = params.hue || 120
         this._startDelay = params.startDelay || 30
