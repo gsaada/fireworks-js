@@ -132,6 +132,7 @@ export class Fireworks {
 
         this._running = true
         this.clear()
+        this._canvas.style.display = 'block'
         this.render()
     }
 
@@ -156,7 +157,7 @@ export class Fireworks {
         this._fireworks = []
         this._particles = []
         this._ctx.clearRect(0, 0, this._width, this._height)
-        this._canvas.remove()
+        this._canvas.style.display = 'none'
 
     }
 
