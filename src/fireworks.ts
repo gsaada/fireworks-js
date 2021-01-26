@@ -156,6 +156,8 @@ export class Fireworks {
         this._fireworks = []
         this._particles = []
         this._ctx.clearRect(0, 0, this._width, this._height)
+        this._canvas.remove()
+
     }
 
     updateSize({ width = this._target.clientWidth, height = this._target.clientHeight }: UpdateSize = {}) {
