@@ -112,7 +112,7 @@ export class Fireworks {
         this._friction = params.friction || 0.95
         this._gravity = params.gravity || 1.5
         this._particleCount = params.particles || 50
-        this._traceLength = params.trace || 3
+        this._traceLength = params.trace || 0
         this._explosionLength = params.explosion || 5
         this._autoresize = params.autoresize ?? true
         this._boundaries = { ...this._boundaries, ...params.boundaries }
@@ -132,6 +132,7 @@ export class Fireworks {
 
         this._running = true
         this.clear()
+        this._canvas.style.display = 'block'
         this.render()
     }
 
@@ -156,7 +157,7 @@ export class Fireworks {
         this._fireworks = []
         this._particles = []
         this._ctx.clearRect(0, 0, this._width, this._height)
-        this._canvas.remove()
+        this._canvas.style.display = 'none'
 
     }
 
