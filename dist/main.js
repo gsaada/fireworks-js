@@ -154,7 +154,7 @@ folders.fireworks.add(fireworksConfig, 'particles', 1, 1000).step(1).onChange(va
     fireworks._particleCount = value
 })
 
-folders.fireworks.add(fireworksConfig, 'trace', 1, 10).step(1).onChange(value => {
+folders.fireworks.add(fireworksConfig, 'trace', 0, 10).step(1).onChange(value => {
     fireworks._traceLength = value
 })
 
