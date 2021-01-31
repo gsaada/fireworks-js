@@ -236,22 +236,22 @@ export class Fireworks {
             })
         }
 
-        // if (this._tick > (this._startDelay * 2)) {
-        //     this._fireworks.push(new Trace(
-        //         this._width * 0.5,
-        //         this._height,
-        //         randomInteger(this._boundaries.left, this._boundaries.right - 50),
-        //         randomInteger(this._boundaries.top, this._boundaries.bottom * 0.5),
-        //         this._ctx,
-        //         this._hue,
-        //         this._speed,
-        //         this._acceleration,
-        //         this._traceLength
-        //     ))
+        if (this._tick > (this._startDelay * 2)) {
+            this._fireworks.push(new Trace(
+                this._width * 0.5,
+                this._height,
+                randomInteger(this._boundaries.left, this._boundaries.right - 50),
+                randomInteger(this._boundaries.top, this._boundaries.bottom * 0.5),
+                this._ctx,
+                this._hue,
+                this._speed,
+                this._acceleration,
+                this._traceLength
+            ))
 
-        //     this._startDelay = randomInteger(this._minDelay, this._maxDelay)
-        //     this._tick = 0
-        // }
+            this._startDelay = randomInteger(this._minDelay, this._maxDelay)
+            this._tick = 0
+        }
 
         if (this._hue > 345) {
             this._hue = 0
