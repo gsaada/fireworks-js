@@ -79,7 +79,7 @@ export class Trace {
         this._ctx.beginPath()
         this._ctx.moveTo(this._coordinates[last][0], this._coordinates[last][1])
         this._ctx.lineTo(this._x, this._y)
-        this._ctx.strokeStyle = 'hsl(' + this._hue + ', 100%, ' + this._brightness + '%)'
+        this._ctx.strokeStyle = 'hsl(' + this._hue + ', 100%, ' + this._brightness + '%, 0.1)'
         this._ctx.stroke()
     }
 }
